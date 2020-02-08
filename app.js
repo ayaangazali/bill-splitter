@@ -1,11 +1,20 @@
 function splitBill() {
 	var total = document.getElementById("total").value;
 	var people = document.getElementById("people").value;
+	var tip = document.getElementById("tip").value;
 
 	total = parseFloat(total);
 	people = parseInt(people);
+	tip = parseFloat(tip);
 
-	var perPerson = total / people;
+	var tipAmount = total * (tip / 100);
+	var grandTotal = total + tipAmount;
+	var perPerson = grandTotal / people;
 
-	document.getElementById("results").innerHTML = "Per Person: $" + perPerson;
+	var out = "";
+	out += "Tip Amount: $" + tipAmount + "<br>";
+	out += "Grand Total: $" + grandTotal + "<br>";
+	out += "Per Person: $" + perPerson;
+
+	document.getElementById("results").innerHTML = out;
 }
