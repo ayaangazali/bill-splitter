@@ -18,3 +18,22 @@ h1 {
 	color: #333333;
 	font-size: 24px;
 }
+
+.row {
+	margin-bottom: 12px;
+}
+
+label {
+	display: block;
+	margin-bottom: 4px;
+	color: #555555;
+	font-size: 14px;
+}
+
+input {
+	width: 100%;
+	padding: 6px;
+	border: 1px solid #aaaaaa;
+	box-sizing: border-box;
+	font-size: 14px;
+}
