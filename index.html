@@ -24,6 +24,19 @@
 <input type="text" id="tip" placeholder="15">
 </div>
 
+<hr>
+
+<p style="font-size:14px;color:#555555;">Or add items below (this will be used instead of the total above):</p>
+
+<div id="items">
+<div class="itemrow">
+<input type="text" class="itemname" placeholder="Item name">
+<input type="text" class="itemamount" placeholder="0.00">
+</div>
+</div>
+
+<button onclick="addItem()">Add Item</button>
+
 <button onclick="splitBill()">Split</button>
 
 <div id="results"></div>
