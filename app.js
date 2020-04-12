@@ -14,6 +14,21 @@ function splitBill() {
 	people = parseInt(people);
 	tip = parseFloat(tip);
 
+	// if items are filled in use those instead
+	var amounts = document.getElementsByClassName("itemamount");
+	var itemSum = 0;
+	var hasItems = false;
+	for (var i = 0; i < amounts.length; i++) {
+		var a = parseFloat(amounts[i].value);
+		if (!isNaN(a) && a > 0) {
+			itemSum = itemSum + a;
+			hasItems = true;
+		}
+	}
+	if (hasItems) {
+		total = itemSum;
+	}
+
 	var tipAmount = total * (tip / 100);
 	var grandTotal = total + tipAmount;
 	var perPerson = grandTotal / people;
