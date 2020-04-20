@@ -29,6 +29,15 @@ function splitBill() {
 		total = itemSum;
 	}
 
+	if (isNaN(total) || total <= 0) {
+		alert("Please enter a valid total bill amount");
+		return;
+	}
+	if (isNaN(people) || people <= 0) {
+		alert("Please enter a valid number of people");
+		return;
+	}
+
 	var tipAmount = total * (tip / 100);
 	var grandTotal = total + tipAmount;
 	var perPerson = grandTotal / people;
