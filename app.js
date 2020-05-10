@@ -37,6 +37,9 @@ function splitBill() {
 		alert("Please enter a valid number of people");
 		return;
 	}
+	if (isNaN(tip) || tip < 0) {
+		tip = 0;
+	}
 
 	var tipAmount = total * (tip / 100);
 	var grandTotal = total + tipAmount;
