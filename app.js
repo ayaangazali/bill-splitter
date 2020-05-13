@@ -46,9 +46,9 @@ function splitBill() {
 	var perPerson = grandTotal / people;
 
 	var out = "";
-	out += "Tip Amount: $" + tipAmount + "<br>";
-	out += "Grand Total: $" + grandTotal + "<br>";
-	out += "Per Person: $" + perPerson;
+	out += "Tip Amount: $" + tipAmount.toFixed(2) + "<br>";
+	out += "Grand Total: $" + grandTotal.toFixed(2) + "<br>";
+	out += "Per Person: $" + perPerson.toFixed(2);
 
 	document.getElementById("results").innerHTML = out;
 }
