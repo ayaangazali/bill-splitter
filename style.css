@@ -48,3 +48,17 @@ button {
 	margin-top: 8px;
 	margin-right: 6px;
 }
+
+.itemrow {
+	display: flex;
+	margin-bottom: 6px;
+}
+
+.itemrow .itemname {
+	width: 60%;
+	margin-right: 6px;
+}
+
+.itemrow .itemamount {
+	width: 40%;
+}
