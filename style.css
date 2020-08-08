@@ -62,3 +62,13 @@ button {
 .itemrow .itemamount {
 	width: 40%;
 }
+
+#results {
+	margin-top: 16px;
+	padding: 10px;
+	background-color: #f4f4f4;
+	border: 1px solid #dddddd;
+	color: #333333;
+	font-size: 15px;
+	line-height: 1.6;
+}
