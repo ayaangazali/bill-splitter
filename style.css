@@ -49,6 +49,10 @@ button {
 	margin-right: 6px;
 }
 
+button:hover {
+	background-color: #2f6fd6;
+}
+
 .itemrow {
 	display: flex;
 	margin-bottom: 6px;
