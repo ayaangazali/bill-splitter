@@ -53,6 +53,12 @@ button:hover {
 	background-color: #2f6fd6;
 }
 
+hr {
+	border: none;
+	border-top: 1px solid #cccccc;
+	margin: 16px 0;
+}
+
 .itemrow {
 	display: flex;
 	margin-bottom: 6px;
