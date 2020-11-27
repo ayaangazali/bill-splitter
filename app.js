@@ -5,6 +5,20 @@ function addItem() {
 	document.getElementById("items").appendChild(div);
 }
 
+function sumItems() {
+	var amounts = document.getElementsByClassName("itemamount");
+	var itemSum = 0;
+	var count = 0;
+	for (var i = 0; i < amounts.length; i++) {
+		var a = parseFloat(amounts[i].value);
+		if (!isNaN(a) && a > 0) {
+			itemSum = itemSum + a;
+			count = count + 1;
+		}
+	}
+	return { sum: itemSum, count: count };
+}
+
 function splitBill() {
 	var total = document.getElementById("total").value;
 	var people = document.getElementById("people").value;
@@ -15,18 +29,9 @@ function splitBill() {
 	tip = parseFloat(tip);
 
 	// if items are filled in use those instead
-	var amounts = document.getElementsByClassName("itemamount");
-	var itemSum = 0;
-	var hasItems = false;
-	for (var i = 0; i < amounts.length; i++) {
-		var a = parseFloat(amounts[i].value);
-		if (!isNaN(a) && a > 0) {
-			itemSum = itemSum + a;
-			hasItems = true;
-		}
-	}
-	if (hasItems) {
-		total = itemSum;
+	var items = sumItems();
+	if (items.count > 0) {
+		total = items.sum;
 	}
 
 	if (isNaN(total) || total <= 0) {
